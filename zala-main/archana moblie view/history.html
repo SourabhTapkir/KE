@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company History - ARCHANA ENTERPRISES</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add this after styles.css -->
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .company-history {
+            padding: 100px 20px;
+            background: #f0f2f5;
+            min-height: 100vh;
+        }
+
+        .history-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .history-title {
+            text-align: center;
+            font-size: 3rem;
+            color: #1b8a3d;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .history-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .milestone {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .milestone.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .milestone-header {
+            background: linear-gradient(135deg, #1b8a3d, #2cb55a);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .year-badge {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .milestone-content {
+            padding: 30px;
+        }
+
+        .milestone h3 {
+            color: #1b8a3d;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .milestone h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #1b8a3d;
+            margin-top: 10px;
+        }
+
+        .milestone p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .milestone::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(27, 138, 61, 0.1), rgba(44, 181, 90, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .milestone:hover::before {
+            opacity: 1;
+        }
+
+        .milestone:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .company-history {
+                padding: 60px 15px;
+            }
+
+            .history-title {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .history-subtitle {
+                font-size: 1rem;
+                margin-bottom: 30px;
+                padding: 0 15px;
+            }
+
+            .timeline {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 10px;
+            }
+
+            .milestone {
+                padding: 15px;
+            }
+
+            .milestone-header {
+                padding: 15px;
+            }
+
+            .year-badge {
+                font-size: 1.8rem;
+            }
+
+            .milestone-content {
+                padding: 20px;
+            }
+
+            .milestone h3 {
+                font-size: 1.3rem;
+            }
+
+            .milestone p {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .footer-section h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <!-- Add this div for the hamburger menu -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="images/logo greeen.jpg" alt="Company Logo" style="width: 70px; height: 45px; margin-right: 30px;">
+                    <span class="company-name" style="font-size: 150px; color: #1b8a3d; margin-left:10px;">ARCHANA ENTERPRISES</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="history.html">Company History</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#Products" class="nav-link">PRODUCTS</a>
+                    <div class="dropdown-content">
+                        <a href="products/strapping-machines.html">Strapping Machines</a>
+                        <a href="products/pp-box-straping-rolls.html">PP Box Straping Rolls</a>
+                        <a href="products/pneumatic-strapping-tool.html">Pneumatic Strapping Tool</a>
+                        <a href="products/bop-tape-roll.html">Bop Tape Roll</a>
+                        <a href="products/polyolefin-shrink-film-roll.html">Polyolefin Shrink Film Roll</a>
+                    </div>
+                </li>
+                <li><a href="catalogs.html">E-CATALOGUES</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            background-color: #ffffff;
+        }
+        body {
+            padding-top: 80px;
+        }
+        
+/* Footer */
+.footer {
+    background-color: #1b8a3d;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    margin-bottom: 1rem;
+}
+
+.footer-brand h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-brand p {
+    font-size: 1rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #ccc;
+}
+
+.footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.7rem;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+
+    <script>
+        let lastScroll = 0;
+        let scrollDirection = 0;
+        const header = document.querySelector('header');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const scrollDifference = currentScroll - lastScroll;
+            
+            scrollDirection = (scrollDirection * 0.8) + (scrollDifference * 0.2);
+            
+            if (currentScroll <= scrollThreshold) {
+                header.style.transform = 'translateY(0)';
+            } else if (Math.abs(scrollDirection) > 2) {
+                const translateY = Math.max(-100, Math.min(0, -scrollDirection));
+                header.style.transform = `translateY(${translateY}%)`;
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (e.clientY < 60) {
+                header.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+
+<section class="company-history">
+    <div class="history-container">
+        <h1 class="history-title">company-history</h1>
+        <p class="history-subtitle">Explore the growth of ARCHANA ENTERPRISES through our expanding network of branches across Maharashtra.</p>
+        
+        <div class="timeline">
+            <div class="milestone">
+                <div class="milestone-header">
+                    <span class="year-badge">1998</span>
+                </div>
+                <div class="milestone-content">
+                    <h3>Head Office Established</h3>
+                    <p>Founded in Pune, Maharashtra, setting the stage for a growing presence in the packaging industry.</p>
+                </div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-header">
+                    <span class="year-badge">2000</span>
+                </div>
+                <div class="milestone-content">
+                    <h3>Mumbai & Nagpur Branches</h3>
+                    <p>Opened branches in Mumbai and Nagpur to strengthen our footprint in key regions of Maharashtra.</p>
+                </div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-header">
+                    <span class="year-badge">2010</span>
+                </div>
+                <div class="milestone-content">
+                    <h3>Sangli Branch</h3>
+                    <p>Extended operations to Sangli, supporting packaging needs of businesses in Southern Maharashtra.</p>
+                </div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-header">
+                    <span class="year-badge">2014</span>
+                </div>
+                <div class="milestone-content">
+                    <h3>Nashik Branch</h3>
+                    <p>Launched our Nashik branch to serve industries in North Maharashtra more efficiently.</p>
+                </div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-header">
+                    <span class="year-badge">2015</span>
+                </div>
+                <div class="milestone-content">
+                    <h3>Sambhajinagar Branch</h3>
+                    <p>Opened a branch in Sambhajinagar (Aurangabad), enhancing our presence in the Marathwada region.</p>
+                </div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-header">
+                    <span class="year-badge">2019</span>
+                </div>
+                <div class="milestone-content">
+                    <h3>Maharashtra Network</h3>
+                    <p>Established a strong presence across Maharashtra with operational teams in key cities, ensuring efficient support and service delivery statewide.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Main Footer Content - 3 Column Layout -->
+        <div class="footer-content">
+            <!-- Logo Column -->
+            <div class="footer-section footer-brand">
+                <h2>ARCHANA</h2>
+                <p>ENTERPRISES</p>
+                
+                <!-- Social Media Icons -->
+                <div class="footer-social">
+                    <a href="https://youtube.com/@archanaenterprises-p4l?si=_MMag7snrhGBbUjs" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="mailto:archana_ent@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/company/archana-enterprises-kepack/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Info Column -->
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <div class="footer-links">
+                    <a href="tel:+919767859841"><i class="fas fa-phone"></i> +91 9767859841</a>
+                    <a href="tel:+919284185709"><i class="fas fa-phone"></i> +91 9284185709</a>
+                    <a href="https://wa.me/919767859841"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="mailto:archana_ent@hotmail.com"><i class="fas fa-envelope"></i> archana_ent@hotmail.com</a>
+                    <a href="https://maps.google.com/?q=Plot No. 45, Sr. No. 115/7/8 2/2, Audumber Society (B), Karve Nagar, Pune - 52">
+                        <i class="fas fa-map-marker-alt"></i> Plot No. 45, Sr. No. 115/7/8 2/2, Audumber Society (B), Karve Nagar, Pune - 52
+                    </a>
+                </div>
+            </div>
+
+            <!-- About Column -->
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <div class="footer-links">
+                    <a href="about.html">About Archana</a>
+                    <a href="catalogs.html">Catalogs</a>
+                    <a href="videos.html">Videos</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>Copyright © 2006–2025. Archana Enterprises Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const milestones = document.querySelectorAll('.milestone');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        milestones.forEach((milestone, index) => {
+            setTimeout(() => {
+                observer.observe(milestone);
+            }, index * 200);
+        });
+    </script>
+<!-- Add before the closing body tag -->
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // Toggle menu
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Handle dropdowns on mobile
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

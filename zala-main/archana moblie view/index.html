@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHANA ENTERPRISES</title>
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" sizes="32x32">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" sizes="96x96">
+    <link rel="apple-touch-icon" href="images/logo.jpg" sizes="180x180">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add this after your existing styles.css link -->
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <!-- Add this div for the hamburger menu -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="images/logo greeen.jpg" alt="Company Logo" style="width: 70px; height: 45px; margin-right: 30px;">
+                    <span class="company-name" style="font-size: 150px; color: #1b8a3d; margin-left:10px;">ARCHANA ENTERPRISES</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="history.html">Company History</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#Products" class="nav-link">PRODUCTS</a>
+                    <div class="dropdown-content">
+                        <a href="products/strapping-machines.html">Strapping Machines</a>
+                        <a href="products/pp-box-straping-rolls.html">PP Box Straping Rolls</a>
+                        <a href="products/pneumatic-strapping-tool.html">Pneumatic Strapping Tool</a>
+                        <a href="products/bop-tape-roll.html">Bop Tape Roll</a>
+                        <a href="products/polyolefin-shrink-film-roll.html">Polyolefin Shrink Film Roll</a>
+                    </div>
+                </li>
+                <li><a href="catalogs.html">E-CATALOGUES</a></li>
+                <li><a href="videos.html">VIDEOS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Remove duplicate slider container and keep only one -->
+    <!-- Slider container with responsive images -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="png/01 copy.jpg"
+                     alt="Main Image" 
+                     style="max-width: 100%; width: auto; height: auto; object-fit: contain;">
+            </div>
+            <div class="slide">
+                <img src="png/02 copy.jpg"
+                     alt="Main Image" 
+                     style="max-width: 100%; width: auto; height: auto; object-fit: contain;">
+            </div>
+            <div class="slide">
+                <img src="png/03 copy.jpg"
+                     alt="Main Image" 
+                     style="max-width: 100%; width: auto; height: auto; object-fit: contain;">
+            </div>
+            <div class="slide">
+                <img src="png/04 copy.jpg"
+                     alt="Main Image" 
+                     style="max-width: 100%; width: auto; height: auto; object-fit: contain;">
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+    </div>
+
+    <!-- Feature Products Section -->
+    <section class="feature-products">
+        <h2>FEATURE PRODUCTS</h2>
+        <div class="products-grid">
+            <div class="product-card" onclick="window.location.href='products/strapping-machines.html';" style="cursor: pointer;">
+                <img src="png/KE 101 (1).webp" alt="Strapping Machine" style="width: 100%; height: 300px; object-fit: contain; background-color: #fff; padding: 15px;">
+                <h3>Packaging Machines</h3>
+                <p>Fully automatic box strapping machine uses polypropylene straps, a highly durable and cost-effective material, ensuring secure and reliable packaging. This makes it a go-to solution for industries where packaging speed and reliability are paramount.</p>
+                <p style="color: #fff; text-align: right; font-style: italic; margin-top: 10px;">Click here for more info →</p>
+            </div>
+            <div class="product-card" onclick="window.location.href='products/pp-box-straping-rolls.html';" style="cursor: pointer;">
+                <img src="png/polypropylene-strapping-500x500.webp" alt="PP Box Strapping Rolls" style="width: 100%; height: 300px; object-fit: contain; background-color: #fff; padding: 15px;">
+                <h3>PP Box Strapping Rolls</h3>
+                <p>High-quality polypropylene strapping rolls designed for optimal packaging security. These durable rolls offer excellent tensile strength, superior elongation resistance, and consistent performance across various strapping machines, making them ideal for industrial packaging needs.</p>
+                <p style="color: #fff; text-align: right; font-style: italic; margin-top: 10px;">Click here for more info →</p>
+            </div>
+            <div class="product-card" onclick="window.location.href='products/pneumatic-strapping-tool.html';" style="cursor: pointer;">
+                <img src="png/Pneumatic Strapping Tool.webp" alt="Pneumatic PET Strapping Tool" style="width: 100%; height: 300px; object-fit: contain; background-color: #fff; padding: 15px;">
+                <h3>Pneumatic PET Strapping Tool</h3>
+                <p>Professional-grade pneumatic strapping tool engineered for heavy-duty applications. Features advanced air-powered tensioning and sealing mechanism for consistent, reliable performance. Ideal for industrial packaging where high tension and secure sealing are critical requirements.</p>
+                <p style="color: #fff; text-align: right; font-style: italic; margin-top: 10px;">Click here for more info →</p>
+            </div>
+            <div class="product-card" onclick="window.location.href='products/bop-tape-roll.html';" style="cursor: pointer;">
+                <img src="png/BOPP.webp" alt="BOPP Packaging Tapes" style="width: 100%; height: 300px; object-fit: contain; background-color: #fff; padding: 15px;">
+                <h3>BOPP Packaging Tapes</h3>
+                <p>Premium quality BOPP (Biaxially Oriented Polypropylene) adhesive tapes designed for superior carton sealing. Features excellent clarity, high tensile strength, and consistent unwinding performance. Available in various sizes and colors, perfect for both manual and automated packaging applications.</p>
+                <p style="color: #fff; text-align: right; font-style: italic; margin-top: 10px;">Click here for more info →</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="industries-we-work">
+        <h2>INDUSTRIES WE WORK FOR</h2>
+        <div class="industry-container">
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <p> Corrugation Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-print"></i>
+                </div>
+                <p>Printing Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <p>Pharmaceutical Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <p>Automobile Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <p>Steel and Aluminium Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <p>Agro Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <p>FMCG Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <p>Logistics and Warehousing Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <p>Food & Beverages Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <p>Chemical Industry</p>
+            </div>
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <p>Daily Products Industry</p>
+            </div>
+            
+            <div class="industry-box">
+                <div class="circle-icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <p>Packaging Industry</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Main Footer Content - 3 Column Layout -->
+            <div class="footer-content">
+                <!-- Logo Column -->
+                <div class="footer-section footer-brand">
+                    <h2>ARCHANA</h2>
+                    <p>ENTERPRISES</p>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="footer-social">
+                      
+                        <a href="https://youtube.com/@archanaenterprises-p4l?si=_MMag7snrhGBbUjs" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:archana_ent@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/company/archana-enterprises-kepack/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Contact Info Column -->
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="footer-links">
+                        <a href="tel:+919767859841"><i class="fas fa-phone"></i> +91 9767859841</a>
+                        <a href="tel:+919284185709"><i class="fas fa-phone"></i> +91 9284185709</a>
+                        <a href="https://wa.me/919767859841"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:archana_ent@hotmail.com"><i class="fas fa-envelope"></i> archana_ent@hotmail.com</a>
+                        <a href="https://maps.google.com/?q=Plot No. 45, Sr. No. 115/7/8 2/2, Audumber Society (B), Karve Nagar, Pune - 52">
+                            <i class="fas fa-map-marker-alt"></i> Plot No. 45, Sr. No. 115/7/8 2/2, Audumber Society (B), Karve Nagar, Pune - 52
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- About Column -->
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <div class="footer-links">
+                        <a href="about.html">About Archana</a>
+                        <a href="catalogs.html">Catalogs</a>
+                        <a href="videos.html">Videos</a>
+                        <a href="contact.html">Contact Us</a>
+
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Copyright Section -->
+            <div class="footer-bottom">
+                <p>Copyright © 2006–2025. Archana Enterprises Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumatic Strapping Tool - ARCHANA ENTERPRISES</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .product-detail {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .product-images {
+            position: relative;
+        }
+
+        .product-images img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-info h1 {
+            color: #1b8a3d;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            margin: 20px 0;
+        }
+
+        .features-list li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .features-list li:before {
+            content: "•";
+            color: #1b8a3d;
+            position: absolute;
+            left: 0;
+        }
+
+        .specifications {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .product-detail {
+                padding: 30px 15px;
+            }
+
+            .product-info h1 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+
+            .product-info p {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+
+            .features-list {
+                margin: 15px 0;
+            }
+
+            .features-list li {
+                font-size: 0.9rem;
+                margin: 8px 0;
+            }
+
+            .specifications {
+                margin-top: 20px;
+                padding: 15px;
+            }
+
+            .specifications ul li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <a href="../index.html" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="../images/logo greeen.jpg" alt="Company Logo" style="width: 70px; height: 45px; margin-right: 30px;">
+                    <span class="company-name" style="font-size: 150px; color: #1b8a3d; margin-left:10px;">ARCHANA ENTERPRISES</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="../about.html" class="nav-link">ABOUT</a>
+                    <div class="dropdown-content">
+                        <a href="../about.html">About Us</a>
+                        <a href="../history.html">Company History</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#Products" class="nav-link">PRODUCTS</a>
+                    <div class="dropdown-content">
+                        <a href="strapping-machines.html">Strapping Machines</a>
+                        <a href="pp-box-straping-rolls.html">PP Box Straping Rolls</a>
+                        <a href="pneumatic-strapping-tool.html">Pneumatic Strapping Tool</a>
+                        <a href="bop-tape-roll.html">Bop Tape Roll</a>
+                        <a href="polyolefin-shrink-film-roll.html">Polyolefin Shrink Film Roll</a>
+                    </div>
+                </li>
+                <li><a href="../catalogs.html">E-CATALOGUES</a></li>
+                <li><a href="../videos.html">VIDEOS</a></li>
+                <li><a href="../contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    
+        body {
+            padding-top: 80px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+    
+        .product-detail {
+            flex: 1;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+        let lastScroll = 0;
+        let scrollDirection = 0;
+        const header = document.querySelector('header');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const scrollDifference = currentScroll - lastScroll;
+            
+            scrollDirection = (scrollDirection * 0.8) + (scrollDifference * 0.2);
+            
+            if (currentScroll <= scrollThreshold) {
+                header.style.transform = 'translateY(0)';
+            } else if (Math.abs(scrollDirection) > 2) {
+                const translateY = Math.max(-100, Math.min(0, -scrollDirection));
+                header.style.transform = `translateY(${translateY}%)`;
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (e.clientY < 60) {
+                header.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+
+    <div class="product-detail">
+        <div class="product-container">
+            <div class="product-images">
+                <img src="../png/Pneumatic Strapping Tool.webp" alt="Pneumatic Strapping Tool">
+            </div>
+            <div class="product-info">
+                <h1>Pneumatic Strapping Tool</h1>
+                <p>Our advanced Pneumatic Strapping Tool is designed for professional packaging operations, offering superior performance and reliability in industrial environments.</p>
+                
+                <div class="features-list">
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>High-strength tensioning capability</li>
+                        <li>Ergonomic design for comfortable operation</li>
+                        <li>Compatible with various strap sizes</li>
+                        <li>Quick and efficient strapping process</li>
+                        <li>Durable construction for long-term use</li>
+                        <li>Easy maintenance and part replacement</li>
+                    </ul>
+                </div>
+
+                <div class="specifications">
+                    <h3>Technical Specifications:</h3>
+                    <ul>
+                        <li>Strap Width: 13-19mm</li>
+                        <li>Strap Thickness: 0.5-1.0mm</li>
+                        <li>Tension Force: Up to 2500N</li>
+                        <li>Air Pressure: 6-8 bar</li>
+                        <li>Weight: 3.8 kg</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <h2>ARCHANA</h2>
+                    <p>ENTERPRISES</p>
+                    <div class="footer-social">
+                        <a href="https://youtube.com/@archanaenterprises-p4l?si=_MMag7snrhGBbUjs" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:archana_ent@hotmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/company/archana-enterprises-kepack/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="footer-links">
+                        <a href="tel:+919767859841"><i class="fas fa-phone"></i> +91 9767859841</a>
+                        <a href="tel:+919284185709"><i class="fas fa-phone"></i> +91 9284185709</a>
+                        <a href="https://wa.me/919767859841"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:archana_ent@hotmail.com"><i class="fas fa-envelope"></i> archana_ent@hotmail.com</a>
+                        <a href="https://maps.google.com/?q=Plot No. 45, Sr. No. 115/7/8 2/2, Audumber Society (B), Karve Nagar, Pune - 52">
+                            <i class="fas fa-map-marker-alt"></i> Plot No. 45, Sr. No. 115/7/8 2/2, Audumber Society (B), Karve Nagar, Pune - 52
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <div class="footer-links">
+                        <a href="../about.html">About Archana</a>
+                        <a href="../catalogs.html">Catalogs</a>
+                        <a href="../videos.html">Videos</a>
+                        <a href="../contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2006–2025. Archana Enterprises Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Add before closing body tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-link');
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
